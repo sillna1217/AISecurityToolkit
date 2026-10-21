@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 安全工具箱</title>
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background: #f3f6fb;
+    color: #1e293b;
+}
+
+header {
+    background: #10233f;
+    color: white;
+    padding: 22px 24px;
+}
+
+.nav {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tag {
+    color: #bfdbfe;
+    font-size: 13px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #10233f;
+}
+
+.intro {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    padding: 28px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px #10233f0a;
+}
+
+.tool-card h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+.tool-card p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 30px 20px;
+}
+
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="brand">AI 安全工具箱</div>
+            <div class="tag">AI & Cybersecurity</div>
+        </div>
+    </header>
+
+    <main>
+        <h1>让安全分析更简单</h1>
+
+        <p class="intro">
+            一个面向学习与实践的网络安全工具平台。<br>
+            从日志分析开始，逐步探索自动化安全检测。
+        </p>
+
+        <div class="tools">
+            <div class="tool-card">
+                <h2>登录日志分析</h2>
+                <p>
+                    统计登录成功与失败次数，
+                    识别短时间内多次登录失败的可疑 IP。
+                </p>
+                <form action="/analyze" method="GET">
+                    <button type="submit">开始分析 →</button>
+                </form>
+            </div>
+        </div>
+
+<div class="tool-card">
+    <h2>IP 黑名单管理</h2>
+    <p>添加需要重点监控的 IP 地址</p>
+
+    <form action="/add_blacklist" method="POST">
+        <input
+            type="text"
+            name="ip"
+            placeholder="例如：192.168.1.100"
+            required
+        >
+        <button type="submit">添加到黑名单</button>
+    </form>
+</div>
+
+    </main>
+
+    <footer>
+        AI 安全工具箱 · 个人学习实践项目
+    </footer>
+</body>
+</html>
+
+
+</html>
